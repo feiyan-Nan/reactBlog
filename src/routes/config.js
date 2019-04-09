@@ -24,6 +24,7 @@ const routes = [
   // }
 ]
 
+console.log(routes, 123123)
 /**
  * 过滤路由信息，路由信息中含有 isIndex 的在渲染
  *

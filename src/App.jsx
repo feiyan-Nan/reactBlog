@@ -31,6 +31,7 @@ class Root extends Component {
 
     const renderRoute = (item, routeContextPath) => {
       let newContextPath = item.path ? `${routeContextPath}/${item.path}` : routeContextPath
+      // 把多个'/'  换成一个 '/'
       newContextPath = newContextPath.replace(/\/+/g, '/')
 
       // auth handler
@@ -62,7 +63,7 @@ class Root extends Component {
 
     return <Switch>{children}</Switch>
   }
-
+  // render会自动执行的
   render() {
     const children = this.renderRoutes(routes, '/')
     return <BrowserRouter>{children}</BrowserRouter>

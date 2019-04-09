@@ -39,6 +39,9 @@
     box-shadow: none;
     background: transparent;
   }
+  #search-box .pointer {
+    cursor: pointer;
+  }
   #search-box input::-webkit-input-placeholder {
     color: #a3b1bf;
   }
@@ -86,11 +89,13 @@
     float: right;
     padding: 0 40px 0 16px;
   }
+  // 小于926就隐藏
   @media screen and (max-width: 926px) {
     #search-box {
       display: none;
     }
   }
+  // 在576和880直接隐藏名字
   @media screen and (max-width: 880px) and (min-width: 576px) {
     .header-left {
       .blog-name {
@@ -98,6 +103,7 @@
       }
     }
   }
+  // 小于576显示
   @media only screen and (max-width: 576px) {
     .header-left .nav-phone-icon {
       display: block;

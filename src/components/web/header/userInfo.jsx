@@ -12,6 +12,7 @@ const mapStateToProps = state => ({
   avatarColor: state.user.avatarColor
 })
 
+console.log(mapStateToProps, 'jj')
 @connect(
   mapStateToProps,
   { register, logout, openAuthModal }
@@ -31,6 +32,7 @@ class UserInfo extends Component {
 
   render() {
     const { username, avatarColor } = this.props
+    console.log(this.props, 1111)
     return (
       <div id="header-userInfo">
         {username ? (

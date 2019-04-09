@@ -4,19 +4,21 @@ import PropTypes from 'prop-types'
 import { Link, withRouter } from 'react-router-dom'
 import { Menu, Icon } from 'antd'
 
-@withRouter
+// @withRouter
 class Nav extends Component {
   static propTypes = {
     navList: PropTypes.array.isRequired,
     mode: PropTypes.string
   }
 
+  // 这个放在this.props作为组件的一个属性
   static defaultProps = {
     mode: 'horizontal'
   }
 
   render() {
     const { navList, mode } = this.props
+    console.log(this.props, 123456)
     return (
       <Menu mode={mode} selectedKeys={[this.props.location.pathname]} className="header-nav">
         {navList.map(nav => (
@@ -32,4 +34,4 @@ class Nav extends Component {
   }
 }
 
-export default Nav
+export default withRouter(Nav)

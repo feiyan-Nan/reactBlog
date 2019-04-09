@@ -4,9 +4,13 @@ import { withRouter } from 'react-router-dom'
 
 @withRouter
 class SearchButton extends Component {
-  state = { keyword: '' }
+  state = { keyword: '', display: 'none'}
 
-  handleChange = e => this.setState({ keyword: e.target.value })
+  handleChange = e => {
+    this.setState({ keyword: e.target.value })
+    console.log(e.target.value)
+    e.target.value ? this.setState({display: 'inline-block'}) : this.setState({display: 'none'})
+  }
 
   handleSubmit = () => {
     const keyword = this.state.keyword
@@ -17,21 +21,29 @@ class SearchButton extends Component {
     e.target.blur()
   }
 
+  handleSearchClose = () => {
+    this.setState({ keyword: '', display: 'none'})
+    this.props.history.push('/')
+  }
+
   render() {
+    console.log(this.props)
     return (
       <Row id="search-box">
         <Col>
-          <Icon type="search" className="anticon" />
+          <Icon type="search" onClick={this.handleSubmit} className="anticon pointer" />
           <Input
             type="text"
             value={this.state.keyword}
             onChange={this.handleChange}
-            onBlur={this.handleSubmit}
-            onPressEnter={this.handlePressEnter}
+            // onBlur={this.handleSubmit}
+            // onPressEnter={this.handlePressEnter}
+            onPressEnter={this.handleSubmit}
             className="header-search"
             placeholder="搜索文章"
-            style={{ width: 200 }}
+            style={{ width: '200px' }}
           />
+          <Icon onClick={this.handleSearchClose} className="pointer" type="close-circle" style={{display: this.state.display}} />
         </Col>
       </Row>
     )
