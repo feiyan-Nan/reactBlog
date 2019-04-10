@@ -11,6 +11,7 @@ function random(colorList) {
   return Math.floor(Math.random() * len)
 }
 
+// 将公共的数据映到this.props上
 const mapStateToProps = state => ({
   tagList: state.article.tagList,
   colorList: state.common.colorList
@@ -20,6 +21,8 @@ const mapStateToProps = state => ({
 class BolgSider extends Component {
   state = { recentList: [] }
 
+  // componentWillMount是在render之前执行的,所以拿不到dom
+  // componentDidMount是在render之后执行的, 所以可以拿到dom
   componentDidMount() {
     axios.get('/article/getList', { params: { page: 1, pageSize: 6 } }).then(res => {
       this.setState({ recentList: res.rows })
@@ -27,23 +30,24 @@ class BolgSider extends Component {
   }
 
   render() {
+    console.log(this.props, 'UUUU')
     const { tagList, colorList } = this.props
     const { recentList } = this.state
     return (
       <div className="sider-wrapper">
         <img src={avatar} className="sider-avatar" alt="" />
         <h2 className="name">郭大大</h2>
-        <div className="title">前端打杂人员，略微代码洁癖</div>
+        <div className="title">前端Explorer，略微代码洁癖</div>
         <ul className="link-list">
           <li>
             <Icon type="github" />
-            <a target="_blank" rel="noreferrer noopener" href="https://github.com/gershonv">
+            <a target="_blank" rel="noreferrer noopener" href="https://github.com/nanfeiyan123">
               github
             </a>
           </li>
           <li>
             <i className="iconfont icon-juejin" />
-            <a target="_blank" rel="noreferrer noopener" href="https://juejin.im/user/5acac6c4f265da2378408f92">
+            <a target="_blank" rel="noreferrer noopener" href="https://juejin.im/user/5b2db436f265da59961bd003">
               juejin
             </a>
           </li>

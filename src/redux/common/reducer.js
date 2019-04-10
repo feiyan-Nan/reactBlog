@@ -13,6 +13,7 @@ const defaultState = {
 
 // reducer
 export const commonReducer = (state = defaultState, action) => {
+  console.log(action, 'PP')
   const { type, payload } = action
   switch (type) {
     case constants.AUTH_OPEN_AUTHMODAL:

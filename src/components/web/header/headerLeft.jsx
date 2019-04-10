@@ -1,6 +1,7 @@
 import React from 'react'
 import { Icon, Dropdown, Menu } from 'antd'
 import { Link } from 'react-router-dom'
+import logo from '@/assets/timg.png'
 
 // import DropdownMenu from './nav'
 
@@ -20,7 +21,7 @@ const HeaderLeft = ({ navList }) => {
 
   return (
     <div className="header-left">
-      <i className="iconfont icon-airplane" style={{ color: '#055796' }} />
+      <img className="blog-logo" src={logo} alt="小破孩"/>
       <span className="blog-name">小破孩的博客</span>
       <Dropdown overlayClassName="header-dropdown" trigger={['click']} overlay={aa}>
         {/* <Dropdown overlayClassName="header-dropdown" trigger={['click']} overlay={<DropdownMenu navList={navList} />}> */}

@@ -9,7 +9,7 @@ export const login = ({ username, password }) => {
         localStorage.setItem('token', res.token)
         dispatch({ type: constants.USER_LOGIN, payload: { token: res.token } })
       } else {
-        message.error(res.message)       
+        message.error(res.message)
       }
       return res
     })

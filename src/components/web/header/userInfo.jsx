@@ -7,12 +7,13 @@ import { openAuthModal } from '@/redux/common/actions'
 import { Button, Dropdown, Avatar, Menu } from 'antd'
 import AuthModal from '../authModal'
 
+// 这里的state是所有的state
 const mapStateToProps = state => ({
   username: state.user.username,
   avatarColor: state.user.avatarColor
 })
 
-console.log(mapStateToProps, 'jj')
+// 放在connect中的都做为this.props
 @connect(
   mapStateToProps,
   { register, logout, openAuthModal }
@@ -32,7 +33,7 @@ class UserInfo extends Component {
 
   render() {
     const { username, avatarColor } = this.props
-    console.log(this.props, 1111)
+    console.log(this.props, 'LLL')
     return (
       <div id="header-userInfo">
         {username ? (

@@ -8,8 +8,7 @@ class SearchButton extends Component {
 
   handleChange = e => {
     this.setState({ keyword: e.target.value })
-    console.log(e.target.value)
-    e.target.value ? this.setState({display: 'inline-block'}) : this.setState({display: 'none'})
+    e.target.value ? this.setState({display: 'inline-block'}) : this.handleSearchClose()
   }
 
   handleSubmit = () => {

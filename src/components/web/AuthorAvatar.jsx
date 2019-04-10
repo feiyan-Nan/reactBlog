@@ -1,5 +1,5 @@
 import React from 'react'
-import avatar from '@/assets/author_avatar.png'
+import avatar from '@/assets/my.jpg'
 import { Avatar } from 'antd'
 
 const AuthAvatar = ({ size = 'default' }) => {
