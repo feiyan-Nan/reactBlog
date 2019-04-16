@@ -8,12 +8,8 @@
 - 博客样式几乎借助于 antd 这个优秀的 UI 框架，主打简约风格，是笔者借鉴了 antd 官方的风格所设计~
 - 分出了几个分支便于学习和查看开发记录，相信这个项目会让刚接触 react 的伙伴学到一些的
 
-- [博客地址](https://guodada.fun) - 联系我可以 email gershonv@163.com | QQ 434358603 | 博客关于页面留言~
-- [项目地址](https://github.com/gershonv/react-blog)
-- [预览地址](http://test.guodada.fun)
-    - 用户名 admin/admin 最高权限，求小伙伴不要乱删数据，乱删数据其他伙伴会没什么数据看的。
-    - 给最高权限是为了让大家看到博主的权限。体验博客完整的功能。
-    - 后台访问路径 /admin
+- [博客地址](http://47.93.247.49/) - 联系我可以 email 3328921305@qq.com | QQ 3328921305 | 博客关于页面留言~
+- [项目地址](https://github.com/nanfeiyan123/reactBlog)
 
 
 ### 技术栈
@@ -43,37 +39,22 @@
 
 为了方便查看开发记录笔者分了几个分支
 
-1. [client-chore](https://github.com/gershonv/react-blog/tree/client-chore): 记录前端项目的构建过程
+1. [client-chore](https://github.com/nanfeiyan123/reactBlog/tree/client-chore): 记录前端项目的构建过程
    1. 配置 react + antd + less + babel-plugins-import 
    2. 配置 redux + redux-thunk + redux-logger (开发和生产环境)
    3. 配置 装饰器 + axios 封装 + 路由配置（主博客路由 和 admin 管理系统）
-2. [server-chore](https://github.com/gershonv/react-blog/tree/server-chore): 记录后端项目的构建过程
+2. [server-chore](https://github.com/nanfeiyan123/reactBlog/tree/server-chore): 记录后端项目的构建过程
    1. 配置 koa + koa-router + 中间件
    2. 项目结构划分（mvc结构）
    3. 配置 sequelize 以及数据库的设计
    4. ...
-3. [client-markdown](https://github.com/gershonv/react-blog/tree/client-markdown): 配置 markdown 语法高亮
-4. [dev](https://github.com/gershonv/react-blog/tree/dev): 开发分支 
+3. [client-markdown](https://github.com/nanfeiyan123/reactBlog/tree/client-markdown): 配置 markdown 语法高亮
+4. [dev](https://github.com/nanfeiyan123/reactBlog/tree/dev): 开发分支 
 
 ## 效果
 
-[预览地址在这](http://test.guodada.fun)
+[预览地址在这](http://47.93.247.49/)
 
-### 概览
-
-![](https://user-gold-cdn.xitu.io/2019/2/24/1691df9ff15ea161?w=1663&h=995&f=gif&s=2722969)
-
-### 评论功能与其他
-
-![](https://user-gold-cdn.xitu.io/2019/2/24/1691e1272aba1261?w=1665&h=1010&f=gif&s=1728568)
-
-### 响应式
-
-![](https://user-gold-cdn.xitu.io/2019/2/24/1691e13769194605?w=1159&h=990&f=gif&s=2855093)
-
-### 后台管理
-
-![](https://user-gold-cdn.xitu.io/2019/2/24/1691e1627fe67721?w=1920&h=1048&f=png&s=140246)
 
 ## 表结构
 
@@ -85,7 +66,7 @@
 ### 前端
 
 ```bash
-git clone https://github.com/gershonv/react-blog.git
+git clone https://github.com/nanfeiyan123/reactBlog.git
 
 cd react-blog
 
@@ -95,9 +76,6 @@ npm start
 ```
 
 ### 后端
-
-创建一个 blogdev 的 mysql 数据库，修改 `server/config/db.js` 去连接你的数据库。
-运行 `server/config/blogdev.sql` 文件导入数据
 
 ```bash
 cd server
@@ -124,7 +102,7 @@ npm start
   - 错误的统一处理，如何优雅的处理
   - 项目结构如何搭建等等
 
-源码地址：[https://github.com/gershonv/react-blog](https://github.com/gershonv/react-blog)
+源码地址：[https://github.com/nanfeiyan123/reactBlog](https://github.com/nanfeiyan123/reactBlog)
 
 项目结构：
 ![](https://user-gold-cdn.xitu.io/2019/2/24/1691e4b68c2dfa95?w=470&h=913&f=png&s=51805)
@@ -133,11 +111,6 @@ npm start
 
 ![](https://user-gold-cdn.xitu.io/2019/2/26/169276665cdadc90?w=331&h=283&f=png&s=27314)
 
-[项目地址](https://github.com/gershonv/react-blog)
-
-模块设计
-- 博主 auth = 1 具备最高权限 文章、评论和回复的增删改查权限（root用户只能在注册后在数据库改权限）
-- 普通用户 auth = 2 具备评论和回复的功能
-- 注意 关于页面引用 articleId = -1 新建文章后自改库吧
+[项目地址](https://github.com/nanfeiyan123/reactBlog)
 
 PS : 觉得不错的伙伴可以给个 star ~~~ 或者 fork 下来看看哦。如果有什么建议，也可以提 issue 哦
