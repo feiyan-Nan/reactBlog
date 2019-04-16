@@ -4,6 +4,7 @@ import AuthorAvatar from '@/components/web/AuthorAvatar'
 import axios from '@/lib/axios'
 import { connect } from 'react-redux'
 import { generateColorMap } from '@/redux/common/actions'
+import { Link } from 'react-router-dom'
 
 import { Divider, Rate, Icon } from 'antd'
 
@@ -39,32 +40,34 @@ class About extends Component {
         <p>本博客使用的技术为 react v16.8 + antd + koa2 + mysql</p>
         <p>
           源码地址为{' '}
-          <a target="_blank" rel="noreferrer noopener" href="https://github.com/gershonv/react-blog">
+          <a target="_blank" rel="noreferrer noopener" href="https://github.com/nanfeiyan123/reactBlog">
             github
           </a>
           ，仅供参考，不做商业用途！
         </p>
         <Divider orientation="left">关于我</Divider>
         <ul className="about-list">
-          <li>姓名：郭少威</li>
-          <li>学历专业：本科 软件工程</li>
+          <li>姓名：李贵功</li>
+          <li>学历专业：本科 数字媒体技术</li>
           <li>
             联系方式：
-            <Icon type="qq" /> 434358603
+            <Icon type="qq" /> 3328921305
             <Divider type="vertical" />
             <i className="iconfont icon-email" />
-            <a href="mailto:gershonv@163.com">gershonv@163.com</a>
+            <a href="mailto:3328921305@qq.com">3328921305@qq.com</a>
           </li>
-          <li>坐标：广州市</li>
+          <li>坐标：北京市</li>
           <li>
             其他博客地址：
-            <a target="_blank" rel="noreferrer noopener" href="https://gershonv.github.io/">
-              hexo 博客
+            <a target="_blank" rel="noreferrer noopener" href="https://gitee.com/liguigong">
+              码云主页
             </a>
             <Divider type="vertical" />
-            <a target="_blank" rel="noreferrer noopener" href="https://juejin.im/user/5acac6c4f265da2378408f92">
+            <a target="_blank" rel="noreferrer noopener" href="https://juejin.im/user/5b2db436f265da59961bd003">
               掘金主页
             </a>
+            <Divider type="vertical" />
+            <Link to="/admin">后端主页</Link>
           </li>
           <li>
             技能

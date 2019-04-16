@@ -2,10 +2,10 @@ const isDev = process.env.NODE_ENV === 'development'
 
 const config = {
   database: isDev ? 'blogdev' : 'react-blog',
-  user: isDev ? 'root' : '',
-  password: isDev ? '' : '',
+  user: isDev ? 'root' : 'root',
+  password: isDev ? '' : '01eb62fa58e47f66',
   options: {
-    host: isDev ? 'localhost' : '', // 连接的 host 地址
+    host: isDev ? 'localhost' : '47.93.247.49', // 连接的 host 地址
     dialect: 'mysql', // 连接到 mysql
     pool: {
       max: 5,
