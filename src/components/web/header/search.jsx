@@ -7,6 +7,7 @@ class SearchButton extends Component {
   state = { keyword: '', display: 'none'}
 
   handleChange = e => {
+    console.log(this.refs.haha, 147258)
     this.setState({ keyword: e.target.value })
     e.target.value ? this.setState({display: 'inline-block'}) : this.handleSearchClose()
   }
@@ -37,6 +38,7 @@ class SearchButton extends Component {
             onChange={this.handleChange}
             // onBlur={this.handleSubmit}
             // onPressEnter={this.handlePressEnter}
+            // allowClear="true"
             onPressEnter={this.handleSubmit}
             className="header-search"
             placeholder="搜索文章"

@@ -66,6 +66,7 @@ class Root extends Component {
   // render会自动执行的
   render() {
     const children = this.renderRoutes(routes, '/')
+    console.log(children, 'LLLLLLLL')
     return <BrowserRouter>{children}</BrowserRouter>
   }
 }

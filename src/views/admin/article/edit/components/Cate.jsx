@@ -71,6 +71,7 @@ class SelectCates extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
+    console.log(nextProps)
     if (this.props.list !== nextProps.list && nextProps.isEdit) {
       this.setState({ selectList: nextProps.list })
     }

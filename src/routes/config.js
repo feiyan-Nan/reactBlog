@@ -11,8 +11,8 @@ let childRoutes = [
   //...
 ]
 
-const isDev = process.env.NODE_ENV === 'development'
-if (isDev) childRoutes.unshift(examplesRoute)
+// const isDev = process.env.NODE_ENV === 'development'
+// if (isDev) childRoutes.unshift(examplesRoute)
 
 // generator all the routes
 const routes = [

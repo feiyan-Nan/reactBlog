@@ -22,6 +22,7 @@ class Login extends Component {
   }
 
   handleSubmit = async () => {
+    console.log(this.props)
     await this.props.login(this.state)
     if (this.props.auth === 1) {
       this.props.history.push('/admin')
